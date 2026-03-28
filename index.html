@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MLBB PRO VS Overlay</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🎥 VIDEO BACKGROUND -->
+<video id="bg-video" autoplay muted loop>
+    <source src="background.mp4" type="video/mp4">
+</video>
+
+<canvas id="particles"></canvas>
+
+<!-- 🔥 FIXED TOURNAMENT LOGO -->
+<div class="top-logo">
+    <img src="tournamentlogo.png" alt="Tournament Logo">
+
+<div class="game-label" id="gameLabel">GAME 1</div>
+    <!-- SCORE BELOW LOGO -->
+    <div class="score-container">
+        <div class="score" id="score1">0</div>
+        <div class="score-vs">-</div>
+        <div class="score" id="score2">0</div>
+    </div>
+</div>
+
+<div class="vs-container">
+
+    <!-- TEAM BLUE -->
+    <div class="team">
+        <div class="frame blue"></div>
+        <img id="logo1">
+        <div class="team-name" id="name1">TEAM BLUE</div>
+    </div>
+
+    <div class="vs">VS</div>
+
+    <!-- TEAM RED -->
+    <div class="team">
+        <div class="frame red"></div>
+        <img id="logo2">
+        <div class="team-name" id="name2">TEAM RED</div>
+    </div>
+
+</div>
+
+<!-- 🎛 CONTROLS -->
+<div class="controls">
+    <input type="text" id="nameInput1" placeholder="Blue Team">
+    <input type="file" id="logoInput1">
+
+    <input type="text" id="nameInput2" placeholder="Red Team">
+    <input type="file" id="logoInput2">
+
+    <!-- SCORE INPUT -->
+    <input type="number" id="scoreInput1" placeholder="Blue Score" min="0" max="2">
+    <input type="number" id="scoreInput2" placeholder="Red Score" min="0" max="2">
+    <!-- 🎮 GAME CONTROL -->
+    <input type="number" id="gameInput" placeholder="Game (1-5)" min="1" max="5">
+    <button onclick="update()">UPDATE</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
